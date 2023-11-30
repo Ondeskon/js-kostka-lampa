@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kostky</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .dice {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .dice img {
+            width: 100px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #previousRolls {
+            margin-top: 20px;
+        }
+
+        #rollsList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #rollsList li {
+            margin-bottom: 5px;
+            padding: 5px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #444;
+        }
+
+        #game {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #game:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Hra s kostkami</h1>
+    <div class="container">
+        <div class="dice" id="dice1">
+            <figure>
+                <img src="img/kostka6.png" alt="Kostka 1">
+            </figure>
+            <div class="result" id="result1">Výsledek Kostka 1</div>
+        </div>
+        <div class="dice" id="dice2">
+            <figure>
+                <img src="img/kostka6.png" alt="Kostka 2">
+            </figure>
+            <div class="result" id="result2">Výsledek Kostka 2</div>
+        </div>
+        <div id="previousRolls">
+            <h3>Hody za hru:</h3>
+            <ul id="rollsList"></ul>
+        </div>
+        <button id="game">Hraj</button>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
